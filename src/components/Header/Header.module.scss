@@ -18,27 +18,11 @@
   }
 }
 
-.content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: rem(16);
-
-  @include respond-to('large') {
-    width: auto;
-    gap: rem(32);
-  }
-}
-
 .finder {
   width: 100%;
-  max-width: rem(450);
+  max-width: rem(480);
   position: relative;
   color: var(--clr-base-lt);
-
-  @include respond-to('large') {
-    width: rem(450);
-  }
 }
 
 .finder:focus-within {
@@ -46,12 +30,11 @@
 }
 
 .searchIcon {
-  width: rem(24);
-  height: rem(24);
   position: absolute;
   top: 50%;
   left: rem(10);
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .input {
@@ -71,14 +54,9 @@
 }
 
 .btn {
-  padding: rem(8);
-  border-radius: rem(12);
+  padding: rem(8) rem(12);
+  border-radius: rem(6);
+  font-weight: 500;
   color: var(--clr-ntrl-max);
   background-color: var(--clr-primary);
-}
-
-.addIcon {
-  width: rem(24);
-  height: rem(24);
-  vertical-align: top;
 }
