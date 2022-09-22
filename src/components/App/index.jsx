@@ -1,12 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import Header from '../Header';
 import Notes from '../Notes';
 import Modal from '../Modal';
 
 export default function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem('notes-data')) || []
+  );
   const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem('notes-data', JSON.stringify(notes));
+  }, [notes]);
 
   const addNote = (text, color) => {
     const date = new Date();
