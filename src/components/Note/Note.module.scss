@@ -1,0 +1,38 @@
+@use '/src/scss/utils' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: rem(16) rem(18);
+  border-top: rem(8) solid transparent;
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: rem(18);
+}
+
+.date {
+  font-size: rem(14);
+  font-weight: 500;
+}
+
+.icon {
+  vertical-align: top;
+}

@@ -1,0 +1,30 @@
+@use '/src/scss/utils' as *;
+
+.main {
+  width: 100%;
+  padding: rem(24);
+
+  @include respond-to('large') {
+    padding: rem(32);
+  }
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.layout {
+  display: grid;
+  gap: rem(24);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, rem(254)), 1fr));
+  grid-auto-rows: rem(280);
+}
