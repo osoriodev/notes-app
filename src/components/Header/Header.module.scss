@@ -1,0 +1,62 @@
+@use '/src/scss/utils' as *;
+
+.header {
+  width: 100%;
+  min-height: rem(72);
+  padding: rem(24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16);
+  background-color: var(--clr-bg);
+
+  @include respond-to('large') {
+    padding: 0 rem(32);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.finder {
+  width: 100%;
+  max-width: rem(480);
+  position: relative;
+  color: var(--clr-base-lt);
+}
+
+.finder:focus-within {
+  color: var(--clr-base);
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: rem(10);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: rem(8) rem(42);
+  padding-right: rem(10);
+  border: none;
+  border-radius: rem(6);
+}
+
+.input:focus {
+  outline: rem(2) solid var(--clr-primary);
+}
+
+.input::placeholder {
+  color: var(--clr-base-lt);
+}
+
+.btn {
+  padding: rem(8) rem(12);
+  border-radius: rem(6);
+  font-weight: 500;
+  color: var(--clr-ntrl-max);
+  background-color: var(--clr-primary);
+}
