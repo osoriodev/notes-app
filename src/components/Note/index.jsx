@@ -10,7 +10,7 @@ export default function Note({ id, text, date, color, handleDeleteNote }) {
   return (
     <article className={styles.card} style={colorStyles}>
       <h3 className={styles.hidden}>Note</h3>
-      <p>{text}</p>
+      <p className={styles.text}>{text}</p>
       <footer className={styles.footer}>
         <time className={styles.date}>{date}</time>
         <button
