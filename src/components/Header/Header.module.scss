@@ -54,9 +54,5 @@
 }
 
 .btn {
-  padding: rem(8) rem(12);
-  border-radius: rem(6);
-  font-weight: 500;
-  color: var(--clr-ntrl-max);
-  background-color: var(--clr-primary);
+  @include primary-btn;
 }

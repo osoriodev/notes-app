@@ -35,7 +35,7 @@ export default function App() {
     <>
       <Header handleSearchNote={setSearchText} />
       <Notes
-        notes={notes.filter(item => item.text.toLowerCase().includes(searchText))}
+        notes={notes.filter(item => item.text.toLowerCase().includes(searchText.toLowerCase()))}
         handleDeleteNote={deleteNote}
       />
       <Modal handleAddNote={addNote} />
