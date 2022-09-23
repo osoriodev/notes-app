@@ -91,16 +91,7 @@
 }
 
 .input {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  position: absolute;
-  border: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+  @include sr-only;
 
   &:checked + .color {
     outline: rem(2) solid var(--clr-base-dk);
@@ -142,9 +133,6 @@
 .btn {
   display: block;
   margin-left: auto;
-  padding: rem(8) rem(12);
-  border-radius: rem(6);
-  font-weight: 500;
-  color: var(--clr-ntrl-max);
-  background-color: var(--clr-primary);
+
+  @include primary-btn;
 }
